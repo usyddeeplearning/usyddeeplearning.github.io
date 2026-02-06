@@ -1,67 +1,741 @@
-<!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>USYD Deep Learning 2026</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <style>
-        body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #f5f7fa;
-            color: #1a1a1a;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>COMP4329 COMP5329: Deep Learning, Spring 2026</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link href="css/style.css" rel="stylesheet" type="text/css" /> </head>
 
-        .container {
-            text-align: center;
-            background: white;
-            padding: 50px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            max-width: 600px;
-        }
-
-        h1 {
-            margin-bottom: 10px;
-            font-size: 32px;
-        }
-
-        p {
-            font-size: 18px;
-            color: #555;
-        }
-
-        .badge {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 8px 16px;
-            background: #0055ff;
-            color: white;
-            border-radius: 999px;
-            font-size: 14px;
-        }
-
-        footer {
-            margin-top: 30px;
-            font-size: 14px;
-            color: #888;
-        }
-    </style>
-</head>
 <body>
-    <div class="container">
-        <h1>COMP5329 / 4329</h1>
-        <p>Deep Learning – Semester 1, 2026</p>
-        <div class="badge">GitHub Pages Test Successful 🚀</div>
+	<div class="container">
+		<table border="0" align="center">
+			<tr>
+				<td width="623" align="center" valign="middle">
+					<h3>University of Sydney</h3> <span class="title">COMP4329 COMP5329: Deep Learning</span></td>
+			</tr>
+			<tr>
+				<td colspan="3" align="center">
+					<h3>Spring 2026</h3></td>
+			</tr>
+			<tr>
+				<td colspan="3" align="center"><span class="menubar">
+        [ 
+            <a href="#schedule">Schedule</a> |
+            <a href="#collaboration_policy">Policies</a> |
+            <a href="https://piazza.com/mit/fall2025/67960">Ed</a> |
+            <a href="https://canvas.mit.edu/courses/33933">Canvas</a> |
+            <a href="https://canvas.mit.edu/courses/33933/external_tools/594">Lecture Recordings</a> 
+         ]</span>
+			 </td>
+			</tr>
+			<!--<tr>
+				 <td colspan="3" align="center">
+					 <h2 style="background-color:#e9ecef; color:red; padding-top:4px; padding-bottom:4px">
+						 <a href="https://minyoungg.github.io/MIT-deeplearning-blogs/blog/" > [Final project blogs] </a>
+					 </h2>
+				 </td>
+			</tr>-->
+		</table>
+		<br />
 
-        <footer>
-            Maintained by Jinxu Lin
-        </footer>
+        <h2>Course Overview</h2>
+        <p>
+            <b>Description</b>: This course provides a comprehensive introduction to modern deep learning, covering both fundamental principles and state-of-the-art models. Topics include deep neural network foundations (MLPs, optimization, initialization), regularization techniques, convolutional neural networks, graph neural networks, sequence modeling architectures (RNNs, LSTMs, Transformers and recent alternatives), multi-modal foundation models, deep reinforcement learning, self-supervised representation learning, and deep generative models such as GANs, VAEs, and diffusion models. The course emphasizes both theoretical understanding and practical insights, with applications spanning computer vision, natural language processing, and multi-modal learning.
+        </p>
+        <p>
+            <b>Pre-requisites</b>: There are no formal pre-requisites for this course. However, students are strongly recommended to have prior exposure to basic machine learning concepts and Python programming. Familiarity with undergraduate-level mathematics, including calculus and probability, will be helpful for understanding the course material.
+        </p>
+        <p>
+            <b>Note</b>: This course is designed for senior undergraduate and graduate students. The content progresses from foundational deep learning concepts to advanced modern architectures and research-oriented topics. Students are expected to engage actively with both theoretical discussions and practical implementations.
+        </p>
+        <p>
+            <b>Administrative Notice</b>: All administrative and logistical enquiries (e.g., enrolment issues, assessments, special consideration, timetable conflicts) should be sent to the course teaching assistant via email. Please use the subject line format <b>COMP5329: &lt;your question&gt;</b> or <b>COMP4329: &lt;your question&gt;</b> and email Teaching Assistant <b>jinxu.lin@sydney.edu.au</b>. Please do not email the lecturer directly regarding administrative matters.
+        </p>
+        
+
+		<!--<h2>Announcements</h2>-->
+		<br>
+		<hr/>
+		<br>
+		<h2>Course Information</h2>
+		<div class="col-md-12">
+			<div class="head-people">
+
+				<div class="person">
+					<div class="person-thumbnail">
+						<div class="person-avatar"> <span class="person-image" style="background: url('./img/changxu.png'); background-size:cover;"></span> </div>
+					</div>
+					<div class="person-text">
+						<h2 class="person-name">Lecturer
+                    <a href="https://beerys.github.io/" style="font-size:16px"><b>Chang Xu</b></a>
+                </h2>
+						<p><span>c dot xu at sydney dot edu dot au</span></p>
+					</div>
+				</div>
+
+				<div class="person">
+					<div class="person-thumbnail">
+						<div class="person-avatar"> <span class="person-image" style="background: url('./img/person.png'); background-size:cover;"></span> </div>
+					</div>
+					<div class="person-text">
+						<h2 class="person-name">Associate Lecturer
+                    <a href="https://people.csail.mit.edu/kaiming/" style="font-size:16px"><b>Chuyang Zhou</b></a>
+
+                </h2>
+						<p><span>chuyang dot zhou at sydney dot edu dot au</span></p>
+					</div>
+				</div>
+
+				<div class="person">
+					<div class="person-thumbnail">
+						<div class="person-avatar"> <span class="person-image" style="background: url('./img/qianyang.png'); background-size:cover;"></span> </div>
+					</div>
+					<div class="person-text">
+						<h2 class="person-name">Associate Lecturer
+                    <a href="https://omarkhattab.com/" style="font-size:16px"><b>Qianyang Chen</b></a>
+
+                </h2>
+						<p><span>qianyang dot chen at sydney dot edu dot au</span></p>
+					</div>
+				</div>
+
+                <div class="person">
+					<div class="person-thumbnail">
+						<div class="person-avatar"> <span class="person-image" style="background: url('./img/person.png'); background-size:cover;"></span> </div>
+					</div>
+					<div class="person-text">
+						<h2 class="person-name">Invited Speaker
+                    <a href="https://omarkhattab.com/" style="font-size:16px"><b>Yunke Wang</b></a>
+
+                </h2>
+						<p><span>yunke dot wang at sydney dot edu dot au</span></p>
+					</div>
+				</div>
+
+                <div class="person">
+					<div class="person-thumbnail">
+						<div class="person-avatar"> <span class="person-image" style="background: url('./img/jinxu.png'); background-size:cover;"></span> </div>
+					</div>
+					<div class="person-text">
+						<h2 class="person-name">Teaching Assistant
+                    <a href="https://omarkhattab.com/" style="font-size:16px"><b>Jinxu Lin</b></a>
+
+                </h2>
+						<p><span>jinxu dot lin at sydney dot edu dot au</span></p>
+					</div>
+				</div>
+
+                <div class="person">
+					<div class="person-thumbnail">
+						<div class="person-avatar"> <span class="person-image" style="background: url('./img/anhdung.png'); background-size:cover;"></span> </div>
+					</div>
+					<div class="person-text">
+						<h2 class="person-name">Tutor
+                    <a href="https://omarkhattab.com/" style="font-size:16px"><b>AnhDung Dinh</b></a>
+
+                </h2>
+						<p><span>anh-dung dot dinh at sydney dot edu dot au</span></p>
+					</div>
+				</div>
+
+                <div class="person">
+					<div class="person-thumbnail">
+						<div class="person-avatar"> <span class="person-image" style="background: url('./img/mike.png'); background-size:cover;"></span> </div>
+					</div>
+					<div class="person-text">
+						<h2 class="person-name">Tutor
+                    <a href="https://omarkhattab.com/" style="font-size:16px"><b>Mike Li</b></a>
+
+                </h2>
+						<p><span>mili7522 at uni dotsydney dot edu dot au</span></p>
+					</div>
+				</div>
+
+                <div class="person">
+					<div class="person-thumbnail">
+						<div class="person-avatar"> <span class="person-image" style="background: url('./img/person.png'); background-size:cover;"></span> </div>
+					</div>
+					<div class="person-text">
+						<h2 class="person-name">Tutor
+                    <a href="https://omarkhattab.com/" style="font-size:16px"><b>Penghao Jiang</b></a>
+
+                </h2>
+						<p><span>penghao dot jiang at unsw dot edu dot au</span></p>
+					</div>
+				</div>
+
+                <div class="person">
+					<div class="person-thumbnail">
+						<div class="person-avatar"> <span class="person-image" style="background: url('./img/van.png'); background-size:cover;"></span> </div>
+					</div>
+					<div class="person-text">
+						<h2 class="person-name">Tutor
+                    <a href="https://omarkhattab.com/" style="font-size:16px"><b>Van Nguyen</b></a>
+
+                </h2>
+						<p><span>nguyenkhacvanlml at gmail dot com</span></p>
+					</div>
+				</div>
+
+                <div class="person">
+					<div class="person-thumbnail">
+						<div class="person-avatar"> <span class="person-image" style="background: url('./img/yuguang.png'); background-size:cover;"></span> </div>
+					</div>
+					<div class="person-text">
+						<h2 class="person-name">Tutor
+                    <a href="https://omarkhattab.com/" style="font-size:16px"><b>Yuguang Hu</b></a>
+
+                </h2>
+						<p><span>yuguang dot hu at sydney dot edu dot au</span></p>
+					</div>
+				</div>
+
+                <div class="person">
+					<div class="person-thumbnail">
+						<div class="person-avatar"> <span class="person-image" style="background: url('./img/yuheng.png'); background-size:cover;"></span> </div>
+					</div>
+					<div class="person-text">
+						<h2 class="person-name">Tutor
+                    <a href="https://omarkhattab.com/" style="font-size:16px"><b>Yuheng Shi</b></a>
+
+                </h2>
+						<p><span>yshi0087 at uni dot sydney dot edu dot au</span></p>
+					</div>
+				</div>
+
+                <div class="person">
+					<div class="person-thumbnail">
+						<div class="person-avatar"> <span class="person-image" style="background: url('./img/yutong.png'); background-size:cover;"></span> </div>
+					</div>
+					<div class="person-text">
+						<h2 class="person-name">Tutor
+                    <a href="https://omarkhattab.com/" style="font-size:16px"><b>Yutong Wang</b></a>
+
+                </h2>
+						<p><span>ywan0095 at uni dot sydney dot edu dot au</span></p>
+					</div>
+				</div>
+
+			</div>
+
+	<div class="clearfix visible-sm-block"></div>
+		</div>
+
+		<div class="col-md-12">
+			<h3>- Logistics</h3>
+			<ul>
+				<li>Lectures: Friday 5:00 - 7:00 PM, <b>BHB Lecture Theatre 1130</b>, Belinda Hutchinson Building.</li>
+				<li>We will be using both Ed and Canvas for announcements.</li>
+				<li>Refer to: <a href="https://piazza.com/mit/fall2025/67960">ed</a> (all questions),
+         				      <a href="https://canvas.mit.edu/courses/33933">Canvas</a> (announcements).
+				</li>
+				<li><b>
+                    For any personal or logistical questions, such as regarding absenses, extension, etc, please email the Teaching Assistant email, jinxu.lin@sydney.edu.au, not the lecturers directly.
+                </b></li>
+			</ul>
+		</div>
+
+		<div class="col-md-12">
+			<h3>- Grading Policy</h3>
+                <li><b> Assignment1 (20%) - Codebase Debugging -<span style="color:red;">TBD</span></b></li>
+                    <ul>
+                        <li><a href="https://www.dropbox.com/scl/fi/mwqtppp1dlub9l0i75qyh/6_7960_Fall_2025_Project_Guidelines.pdf?rlkey=j07t54chig54yqzmnv9l47dlg&st=xeh3qw8j&dl=0">Project guidelines</a></li>
+                        <li>Write up demonstrating novel experimentation and visualization</li>
+                        <li>Groups from 2 to 3</li>
+                    </ul>
+
+                <li><b> Assignment2 (20%) - Research project focused on deeper understanding -<span style="color:red;">TBD</span></b></li>
+                    <ul>
+                        <li><a href="https://www.dropbox.com/scl/fi/mwqtppp1dlub9l0i75qyh/6_7960_Fall_2025_Project_Guidelines.pdf?rlkey=j07t54chig54yqzmnv9l47dlg&st=xeh3qw8j&dl=0">Project guidelines</a></li>
+                        <li>Write up demonstrating novel experimentation and visualization</li>
+                        <li>Groups from 2 to 3</li>
+                    </ul>
+                <li><b> Final Exam (60%) </b></li>
+                    <ul>
+                        <li>2 hour exam, closed book, no computers</li>
+                        <li>1 double-sided page of handwritten notes</li>
+                        <li><b>Double pass</b></li>
+                    </ul>
+
+			<li>
+				<a href="#collaboration_policy">Collaboration policy</a>
+			</li>
+			<li>
+				<a href="#AI_policy">AI assistants policy (ChatGPT, etc)</a>
+			</li>
+			<li>
+				<a href="#attendance_policy">Attendance policy</a>
+			</li>
+			<li>
+      	<a href="#late_policy">Late policy</a>
+      </li>
+
     </div>
+
+
+		<div class="col-md-12">
+			<h3>- Materials -<span style="color:red;">TBD</span></h3>
+			<ul>
+				<li>Readings will come from a variety of sources and will be posted on the schedule each week.</li>
+				<li>Some readings are derived from the course textbook, which can be found for free online: <a href="https://visionbook.mit.edu/">Foundations of Computer Vision</a>.</li>
+				<li>The best textbook devoted entirely to deep learning is probably <a href="https://udlbook.github.io/udlbook/">Understanding Deep Learning</a>, which is freely available online.</li>
+			</ul>
+		</div>
+
+
+    <p>&nbsp;</p>
+    <br />
+    <hr />
+    <h2 id="schedule">Class Schedule</h2>
+    <p style="color:red;"> ** class schedule is subject to change ** </p>
+    <table class="schedule" align="center" border="1" width="950">
+    <tbody>
+        <tr>
+          <td align="center" width="90"><strong>Date</strong></td>
+          <td align="center" width="240"><strong>Topics</strong></td>
+          <td align="center" width="130"><strong>Speaker</strong></td>
+          <td align="center" width="260"><strong>Course Materials</strong></td>
+        </tr>
+
+
+        <tr>
+            <td colspan="6" class="schedule_week" align="center" height="28" valign="middle">Week 1</td>
+        </tr>
+
+        <tr>
+            <td sdnum="1033;0;@" align="left">Fri Feb27</td>
+            <td align="left">Course overview and introduction of deep learning<br /></td>
+            <td> Chang Xu </td>
+            <td align="left">
+				<a href="https://www.dropbox.com/scl/fi/wfjnzp5bb2r8vcgvalv51/1_intro_2025.pdf?rlkey=3v6z1zqvp2knscopkzvstjs9n&st=tjyeqe2e&dl=0">slides</a><br/>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="6" class="schedule_week" align="center" height="28" valign="middle">Week 2</td>
+        </tr>
+
+		<tr>
+            <td sdnum="1033;0;@" align="left">Thu/Fri Mar5/6</td>
+            <td align="left"> Tutorial 1</td>
+            <td></td>
+            <td>
+                <a href="https://colab.research.google.com/drive/1nZg9_wYpVYWS9xZAiSft5_gyluuQpBWY?usp=sharing">tutorial code</a>
+			</td>
+        </tr>
+
+        <tr>
+            <td sdnum="1033;0;@" align="left">Fri Mar6</td>
+            <td align="left">Foundations of Deep Neural Networks<br/>
+                <details>
+                    <summary><b style="color:#38b000"> + details</b></summary>
+                    <i>MLP, activation function, backpropagation, optimization, initialization</i>
+                </details>
+            </td>
+            <td>Chuyang Zhou</td>
+            <td align="left">
+				    <a href="https://www.dropbox.com/scl/fi/kv1ddh7ss8oxohtvzlsjh/2_backprop_2025.pdf?rlkey=wck8o09edebcay7mp6gohygj5&st=17v992ys&dl=0">slides</a>
+            </td>
+        </tr>
+
+		
+        <tr>
+            <td colspan="6" class="schedule_week" align="center" height="28" valign="middle">Week 3</td>
+        </tr>
+
+        <tr>
+            <td sdnum="1033;0;@" align="left">Thu/Fri Mar12/13</td>
+            <td align="left"> Tutorial 2</td>
+            <td></td>
+            <td>
+                <a href="https://colab.research.google.com/drive/1nZg9_wYpVYWS9xZAiSft5_gyluuQpBWY?usp=sharing">tutorial code</a>
+			</td>
+        </tr>
+
+        <tr>
+            <td sdnum="1033;0;@" align="left">Fri Mar13</td>
+            <td align="left">Regularization for Deep Models<br />
+                <details>
+                    <summary><b style="color:#38b000"> + details</b></summary>
+                    <i>
+                        weight decay, drop out, early stopping, batch&layer normalization, data augmentation
+                    </i>
+                </details>
+            </td>
+            <td>Qianyang Chen</td>
+            <td>
+                <a href="https://www.dropbox.com/scl/fi/g9hozgna3ralnpibg30oz/4_grid_archs_2025.pdf?rlkey=d0wbf24wck84rayhbj1q0d01m&st=vnt61skl&dl=0">slides</a>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="6" class="schedule_week" align="center" height="28" valign="middle">Week 4</td>
+        </tr>
+
+        <tr>
+            <td sdnum="1033;0;@" align="left">Thu/Fri Mar19/20</td>
+            <td align="left"> Tutorial 3</td>
+            <td></td>
+            <td>
+                <a href="https://colab.research.google.com/drive/1nZg9_wYpVYWS9xZAiSft5_gyluuQpBWY?usp=sharing">tutorial code</a>
+			</td>
+        </tr>
+
+        <tr>
+            <td sdnum="1033;0;@" align="left">Fri Mar/20</td>
+            <td align="left">Convolutional Neural Networks<br>
+						<details>
+							<summary><b style="color:#38b000"> + details</b></summary>
+							<i>
+								convolution, pooling, AlexNet, VGGNet, GoogleNet, ResNet, Inception network
+							</i>
+						</details>
+					 </td>
+            <td>Qianyang Chen</td>
+            <td>
+                <a href="https://www.dropbox.com/scl/fi/yorf3fw3ovrptaaoyh441/6_transformers_2025.pdf?rlkey=zkjpma8flvy5ksjc333hxp9q8&st=v403dfgl&dl=0">slides</a>
+            </td>
+
+
+        <tr>
+            <td colspan="6" class="schedule_week" align="center" height="28" valign="middle">Week 5 </td>
+        </tr>
+
+        <tr>
+            <td sdnum="1033;0;@" align="left">Thu/Fri Mar26/27</td>
+            <td align="left"> Tutorial 4</td>
+            <td></td>
+            <td>
+                <a href="https://colab.research.google.com/drive/1nZg9_wYpVYWS9xZAiSft5_gyluuQpBWY?usp=sharing">tutorial code</a>
+			</td>
+        </tr>
+
+        <tr>
+            <td sdnum="1033;0;@" align="left">Tue 9/30</td>
+            <td align="left"> Graph Neural Networks</td>
+            <td>Qianyang Chen</td>
+            <td>
+                <a href="https://www.dropbox.com/scl/fi/8p20mfl0w66df5pjf3z9c/8_representation_rec_2025.pdf?rlkey=8okp1xd19bq9ox59kpx93a94o&st=9butpzi3&dl=0">slides</a>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="6" class="schedule_week" align="center" height="28" valign="middle">Week 6</td>
+        </tr>
+
+        <tr>
+            <td sdnum="1033;0;@" align="left">Thu Apr2</td>
+            <td align="left"> Tutorial 5
+                <details>
+                    <summary><b style="color:#38b000"> + details</b></summary>
+                    <i>
+                        There will be no lecture or tutorial this Friday due to the public holiday. 
+                        Students who are enrolled in the Friday tutorial are encouraged to attend the Thursday tutorial this week.
+                </details>
+            </td>
+            <td></td>
+            <td>
+                <a href="https://colab.research.google.com/drive/1nZg9_wYpVYWS9xZAiSft5_gyluuQpBWY?usp=sharing">tutorial code</a>
+			</td>
+        </tr>
+
+
+        <tr>
+            <td colspan="6" class="schedule_week" align="center" height="28" valign="middle">Week 7</td>
+        </tr>
+
+        <tr>
+            <td sdnum="1033;0;@" align="left">Thu/Fri Apr16/17</td>
+            <td align="left"> Tutorial 6</td>
+            <td></td>
+            <td>
+                <a href="https://colab.research.google.com/drive/1nZg9_wYpVYWS9xZAiSft5_gyluuQpBWY?usp=sharing">tutorial code</a>
+			</td>
+        </tr>
+        
+        <tr>
+            <td sdnum="1033;0;@" align="left">Fri Apr17</td>
+            <td align="left"> Sequence Modeling Architectures-I
+                <details>
+                    <summary><b style="color:#38b000"> + details</b></summary>
+                    <i>
+                        RNN, LSTM, GRU, Transformer
+                </details>
+            </td>
+            <td>Chuyang Zhou</td>
+            <td>
+                <a href="https://www.dropbox.com/scl/fi/8p20mfl0w66df5pjf3z9c/8_representation_rec_2025.pdf?rlkey=8okp1xd19bq9ox59kpx93a94o&st=9butpzi3&dl=0">slides</a>
+            </td>
+        </tr>
+
+
+		<tr>
+            <td colspan="6" class="schedule_week" align="center" height="28" valign="middle">Week 8</td>
+        </tr>
+
+        <tr>
+            <td sdnum="1033;0;@" align="left">Thu/Fri Apr23/24</td>
+            <td align="left"> Tutorial 7</td>
+            <td></td>
+            <td>
+                <a href="https://colab.research.google.com/drive/1nZg9_wYpVYWS9xZAiSft5_gyluuQpBWY?usp=sharing">tutorial code</a>
+			</td>
+        </tr>
+
+		<tr>
+            <td sdnum="1033;0;@" align="left">Fri Apr24 </td>
+            <td align="left"> Sequence Modeling Architectures-II
+                <details>
+                    <summary><b style="color:#38b000"> + details</b></summary>
+                    <i>
+                        MAMBA, KAN, RWKV
+                </details>
+            </td>
+            <td>Chang Xu</td>
+            <td>
+                <a href="https://www.dropbox.com/scl/fi/8p20mfl0w66df5pjf3z9c/8_representation_rec_2025.pdf?rlkey=8okp1xd19bq9ox59kpx93a94o&st=9butpzi3&dl=0">slides</a>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="6" class="schedule_week" align="center" height="28" valign="middle">Week 9</td>
+        </tr>
+        
+        <tr>
+            <td sdnum="1033;0;@" align="left">Thu/Fri Apr30/May1</td>
+            <td align="left"> Tutorial 8</td>
+            <td></td>
+            <td>
+                <a href="https://colab.research.google.com/drive/1nZg9_wYpVYWS9xZAiSft5_gyluuQpBWY?usp=sharing">tutorial code</a>
+			</td>
+        </tr>
+
+        <tr>
+            <td sdnum="1033;0;@" align="left">Fri May1</td>
+            <td align="left"> Multi-Modal Foundation Models
+                <details>
+                    <summary><b style="color:#38b000"> + details</b></summary>
+                    <i>
+                        Cross-attention, KV Cache, LLM/VLM/VLA
+                </details>
+            </td>
+            <td>Yunke Wang</td>
+            <td>
+                <a href="https://www.dropbox.com/scl/fi/aa9oj9sgcatu7s23iumv1/15_posttraining_2025.pdf?rlkey=1r0thyx330grcn8io2n1j5vnk&st=b2z4sh4b&dl=0">slides</a>    
+            </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="6" class="schedule_week" align="center" height="28" valign="middle">Week 10</td>
+        </tr>
+
+        <tr>
+            <td sdnum="1033;0;@" align="left">Thu/Fri May7/8</td>
+            <td align="left"> Tutorial 9</td>
+            <td></td>
+            <td>
+                <a href="https://colab.research.google.com/drive/1nZg9_wYpVYWS9xZAiSft5_gyluuQpBWY?usp=sharing">tutorial code</a>
+			</td>
+        </tr>
+
+        <tr>
+            <td sdnum="1033;0;@" align="left">Fri May8</td>
+            <td align="left">Deep Reinforcement Learning
+                <details>
+                    <summary><b style="color:#38b000"> + details</b></summary>
+                    <i>
+                        DPO, GRPO
+                    </i>
+                </details>
+            </td>
+            <td>Yunke Wang</td>
+            <td>
+                <a href="https://www.dropbox.com/scl/fi/pk81c0p4mk68lli60sikl/17_ood_2025.pdf?rlkey=4ddc1nkqwpuc74130pi2wuvpy&st=7ko1cc6p&dl=0">slides</a>		
+            </td>
+        </tr>
+
+
+		<tr>
+            <td colspan="6" class="schedule_week" align="center" height="28" valign="middle">Week 11</td>
+        </tr>
+
+        <tr>
+            <td sdnum="1033;0;@" align="left">Thu/Fri May14/15</td>
+            <td align="left"> Tutorial 10</td>
+            <td></td>
+            <td>
+                <a href="https://colab.research.google.com/drive/1nZg9_wYpVYWS9xZAiSft5_gyluuQpBWY?usp=sharing">tutorial code</a>
+			</td>
+        </tr>
+
+		<tr>
+            <td sdnum="1033;0;@" align="left">Fri May15</td>
+            <td align="left">Self-Supervised Representation Learning
+				<details>
+					<summary><b style="color:#38b000"> + details</b></summary>
+					<i>
+						Autoencoder, CLIP, MAE
+					</i>
+				</details>
+            </td>
+            <td>Chang Xu</td>
+            <td>
+                <a href="https://www.dropbox.com/scl/fi/9hqmdcnbz543dq6q1u8lc/19_inference_2025.pdf?rlkey=f037pje41j5up5u82h4tft9sz&st=i0ws6hg4&dl=0">slides</a>
+            </td>
+        </tr>
+
+		<tr>
+            <td colspan="6" class="schedule_week" align="center" height="28" valign="middle">Week 12</td>
+        </tr>
+
+        <tr>
+            <td sdnum="1033;0;@" align="left">Thu/Fri May21/22</td>
+            <td align="left"> Tutorial 11</td>
+            <td></td>
+            <td>
+                <a href="https://colab.research.google.com/drive/1nZg9_wYpVYWS9xZAiSft5_gyluuQpBWY?usp=sharing">tutorial code</a>
+			</td>
+        </tr>
+
+        <tr>
+            <td sdnum="1033;0;@" align="left">Fri May22</td>
+            <td align="left">Deep Generative Models
+				<details>
+					<summary><b style="color:#38b000"> + details</b></summary>
+					<i>
+						GAN, VAE, Diffusion Models, Flow Matching
+					</i>
+				</details>
+            </td>
+            <td>Chang Xu</td>
+            <td>
+                <a href="https://www.dropbox.com/scl/fi/9hqmdcnbz543dq6q1u8lc/19_inference_2025.pdf?rlkey=f037pje41j5up5u82h4tft9sz&st=i0ws6hg4&dl=0">slides</a>
+            </td>
+        </tr>
+
+		<tr>
+            <td colspan="6" class="schedule_week" align="center" height="28" valign="middle">Week 13</td>
+        </tr>
+
+        <tr>
+            <td sdnum="1033;0;@" align="left">Thu/Fri May28/29</td>
+            <td align="left"> Tutorial 12</td>
+            <td></td>
+            <td>
+                <a href="https://colab.research.google.com/drive/1nZg9_wYpVYWS9xZAiSft5_gyluuQpBWY?usp=sharing">tutorial code</a>
+			</td>
+        </tr>
+
+        <tr>
+            <td sdnum="1033;0;@" align="left">Fri May22</td>
+            <td align="left">Review</td>
+            <td>Chang Xu</td>
+            <td>
+                <a href="https://www.dropbox.com/scl/fi/9hqmdcnbz543dq6q1u8lc/19_inference_2025.pdf?rlkey=f037pje41j5up5u82h4tft9sz&st=i0ws6hg4&dl=0">slides</a>
+            </td>
+        </tr>
+
+    </tbody>
+    </table>
+
+    <hr/>
+    <h2 id="collaboration_policy">Collaboration Policy</h2>
+    <ul>
+        <li>
+            All submitted work must represent your <b>own independent effort</b>. You are welcome to discuss
+            ideas, concepts, and approaches with other students, tutors, and lecturers.
+        </li>
+        <li>
+            However, you must not copy, share, or distribute complete or near-complete solutions, nor ask
+            others to verify the correctness of your answers, whether in person or via online platforms
+            (e.g., Ed or Canvas).
+        </li>
+        <li>
+            If you discuss an assignment with anyone other than course staff, you must clearly acknowledge
+            their names at the beginning of your submission.
+        </li>
+    </ul>
+
+    <hr/>
+    <h2 id="AI_policy">AI Assistants Policy</h2>
+    <ul>
+        <li>
+            The rules governing the use of AI assistants (e.g., ChatGPT and similar tools) are the <b>same</b>
+            as those for seeking help from other people.
+        </li>
+        <li>
+            As this is a deep learning course, students are encouraged to explore and experiment with modern
+            AI tools in order to better understand their capabilities and limitations. Developing this
+            understanding is part of the learning objectives of the course.
+        </li>
+        <li>
+            You may use AI assistants to ask conceptual questions, clarify lecture material, or receive
+            general guidance—just as you would when consulting course staff during office hours.
+        </li>
+        <li>
+            However, you must not use AI assistants to generate complete or substantial portions of your
+            assessed work, in the same way that you would not ask another person to complete an assignment
+            on your behalf.
+        </li>
+        <li>
+            If you are unsure whether a particular use of an AI tool is appropriate, consider whether the
+            same request would be acceptable if made to a human.
+        </li>
+        <li>
+            If you make use of any AI tools while working on an assignment, you must briefly disclose which
+            tools were used and how they were used at the beginning of your submission.
+        </li>
+    </ul>
+
+    <hr/>
+    <h2 id="attendance_policy">Attendance Policy</h2>
+    <ul>
+        <li>
+            Class attendance is optional. Lecture recordings will be made available on Canvas shortly after
+            each session for students who are unable to attend in person.
+        </li>
+    </ul>
+
+    <hr />
+    <h2 id="late_policy">Late Policy</h2>
+    <p>
+        Suppose you submit an assessment after the deadline and have <b>not</b> been granted special consideration or alternative arrangements:
+    </p>
+    <ul>
+        <li>
+            A penalty of <b>5% of the maximum mark</b> will be applied for each day (or part of a day) late.
+        </li>
+        <li>
+            After <b>10 days</b> past the deadline, a mark of <b>zero</b> will be awarded.
+        </li>
+        <li>
+            Late submissions are rounded up to full days; for example, submitting <b>1 hour late</b>
+            counts as <b>1 late day</b>.
+        </li>
+    </ul>
+    <p><b>Examples:</b></p>
+    <ul>
+        <li>
+            If an assignment is worth <b>40%</b> of the final mark and is submitted <b>1 hour late</b>,
+            the maximum achievable mark will be <b>38%</b>.
+        </li>
+        <li>
+            If an assignment is worth <b>40%</b> of the final mark and is submitted <b>28 hours late</b>,
+            the maximum achievable mark will be <b>36%</b>.
+        </li>
+    </ul>
+    <p>
+        <b>Warning:</b> Submission systems may become very slow close to deadlines.
+        Students are strongly encouraged to submit early. You may resubmit your work
+        if time permits before the deadline.
+    </p>
+
+<p>&nbsp;</p><hr />
+</div>
 </body>
+
 </html>
